@@ -156,6 +156,7 @@ def main():
             # Display the word cloud
             st.markdown(f"## Word cloud for {selected_author}")
             plt.imshow(wordcloud, interpolation='bilinear')
+            st.set_option('deprecation.showPyplotGlobalUse', False)
             plt.axis("off")
             st.pyplot()
 
