@@ -65,7 +65,7 @@ def main():
 
         # Parse the text and get the DataFrame
         df = whatsapp_parser16(text)
-        df["date"] = pd.to_datetime(df["date"], infer_datetime_format=True)
+        df["date"] = pd.to_datetime(df["date"], infer_datetime_format=True, errors='coerce')
 
         # Display the DataFrame
         st.write(df.head(10))
